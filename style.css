@@ -241,3 +241,29 @@ footer {
   background-color: #ffb347;
 }
 
+/* WhatsApp Floating Button with Real Icon */
+.whatsapp-float {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  width: 60px;
+  height: 60px;
+  background: #25d366;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+  transition: transform 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
+.whatsapp-float .whatsapp-icon {
+  width: 30px;
+  height: 30px;
+}
+
