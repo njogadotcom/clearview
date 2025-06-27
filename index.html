@@ -4,7 +4,101 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>ClearView TV</title>
+  <meta name="description" content="Watch high-quality IPTV channels anytime, anywhere with ClearView TV. Affordable packages, PayPal & MPesa payments, and easy access." />
+  <meta name="keywords" content="IPTV, ClearView TV, PayPal, MPesa, TV streaming, international channels" />
+  <meta property="og:title" content="ClearView TV - IPTV Streaming" />
+  <meta property="og:description" content="Stream high-quality international channels at affordable prices. Pay via PayPal or MPesa." />
+  <meta property="og:image" content="https://yourdomain.com/logo.png" />
+  <meta property="og:url" content="https://yourusername.github.io/ClearViewTV/" />
   <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background: #000;
+      color: white;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: white;
+      margin-left: 1rem;
+      text-decoration: none;
+    }
+    #hero {
+      text-align: center;
+      padding: 2rem;
+      background: #222;
+      color: white;
+    }
+    .btn {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      background: #00aaff;
+      color: white;
+      text-decoration: none;
+      margin-top: 1rem;
+    }
+    #products {
+      padding: 2rem;
+      text-align: center;
+    }
+    .product-grid {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .product-card {
+      background: white;
+      padding: 1rem;
+      border: 1px solid #ccc;
+      width: 250px;
+    }
+    .product-card img {
+      width: 100%;
+      height: auto;
+    }
+    footer {
+      background: #000;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+    form {
+      margin-top: 1rem;
+    }
+    .whatsapp-float {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      bottom: 40px;
+      right: 40px;
+      background-color: #25d366;
+      color: white;
+      border-radius: 50px;
+      text-align: center;
+      font-size: 30px;
+      box-shadow: 2px 2px 3px #999;
+      z-index: 100;
+    }
+    .whatsapp-float i {
+      margin-top: 16px;
+    }
+  </style>
+  <script>
+    function payWithMpesa(packageName, price) {
+      alert('Initiating MPesa payment for ' + packageName + ' at KES ' + price);
+    }
+  </script>
 </head>
 <body>
   <header>
@@ -25,24 +119,60 @@
     <h2>Our Packages</h2>
     <div class="product-grid">
       <div class="product-card">
+        <img src="https://via.placeholder.com/250x150?text=1+Month" alt="1 Month Package">
         <h3>1 Month Package</h3>
-        <p>$ 8</p>
-        <button>Buy Now</button>
+        <p>$8 / KES 1000</p>
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+          <input type="hidden" name="cmd" value="_xclick">
+          <input type="hidden" name="business" value="your-paypal@example.com">
+          <input type="hidden" name="item_name" value="1 Month IPTV">
+          <input type="hidden" name="amount" value="8">
+          <input type="hidden" name="currency_code" value="USD">
+          <input type="submit" value="Pay with PayPal">
+        </form>
+        <button onclick="payWithMpesa('1 Month', 1000)">Pay with MPesa</button>
       </div>
       <div class="product-card">
+        <img src="https://via.placeholder.com/250x150?text=3+Months" alt="3 Month Package">
         <h3>3 Month Package</h3>
-        <p>$ 18</p>
-        <button>Buy Now</button>
+        <p>$18 / KES 2500</p>
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+          <input type="hidden" name="cmd" value="_xclick">
+          <input type="hidden" name="business" value="your-paypal@example.com">
+          <input type="hidden" name="item_name" value="3 Month IPTV">
+          <input type="hidden" name="amount" value="18">
+          <input type="hidden" name="currency_code" value="USD">
+          <input type="submit" value="Pay with PayPal">
+        </form>
+        <button onclick="payWithMpesa('3 Month', 2500)">Pay with MPesa</button>
       </div>
       <div class="product-card">
+        <img src="https://via.placeholder.com/250x150?text=6+Months" alt="6 Month Package">
         <h3>6 Month Package</h3>
-        <p>$ 38</p>
-        <button>Buy Now</button>
+        <p>$38 / KES 5000</p>
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+          <input type="hidden" name="cmd" value="_xclick">
+          <input type="hidden" name="business" value="your-paypal@example.com">
+          <input type="hidden" name="item_name" value="6 Month IPTV">
+          <input type="hidden" name="amount" value="38">
+          <input type="hidden" name="currency_code" value="USD">
+          <input type="submit" value="Pay with PayPal">
+        </form>
+        <button onclick="payWithMpesa('6 Month', 5000)">Pay with MPesa</button>
       </div>
       <div class="product-card">
+        <img src="https://via.placeholder.com/250x150?text=12+Months" alt="12 Month Package">
         <h3>12 Month Package</h3>
-        <p>$ 50</p>
-        <button>Buy Now</button>
+        <p>$50 / KES 6500</p>
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+          <input type="hidden" name="cmd" value="_xclick">
+          <input type="hidden" name="business" value="your-paypal@example.com">
+          <input type="hidden" name="item_name" value="12 Month IPTV">
+          <input type="hidden" name="amount" value="50">
+          <input type="hidden" name="currency_code" value="USD">
+          <input type="submit" value="Pay with PayPal">
+        </form>
+        <button onclick="payWithMpesa('12 Month', 6500)">Pay with MPesa</button>
       </div>
     </div>
   </section>
@@ -50,10 +180,19 @@
   <section id="contact">
     <h2>Contact Us</h2>
     <p>WhatsApp: +254757780414<br>Email: wooskinner@yahoo.com</p>
+    <form action="https://formspree.io/f/yourFormID" method="POST">
+      <input type="email" name="email" placeholder="Your email" required>
+      <textarea name="message" placeholder="Your message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
   </section>
 
   <footer>
     <p>&copy; 2025 ClearView TV. All rights reserved.</p>
   </footer>
+
+  <a href="https://wa.me/254757780414" class="whatsapp-float" target="_blank">
+    <i>💬</i>
+  </a>
 </body>
 </html>
