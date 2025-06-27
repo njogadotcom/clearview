@@ -32,7 +32,7 @@
     <h2>Our Packages</h2>
     <div class="product-grid">
 
-      <!-- 1 Month Plan -->
+      <!-- Repeat this structure for each subscription plan -->
       <div class="product-card featured">
         <h3>1 Month</h3>
         <p class="price">US$8</p>
@@ -45,27 +45,14 @@
           <li>Uptime 99.99%</li>
           <li>Support all devices</li>
         </ul>
-        <div id="paypal-button-container-P-4S880592P25868536NBPJ4GY"></div>
-<script src="https://www.paypal.com/sdk/js?client-id=AW2NTnw4CK3Tux--BKeHBJskrLQesbMVF8qKoOLeL0JEt9N8G_bwrD8ut6hbEkERbh5J0hNVL5vDXPLu&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script>
-<script>
-  paypal.Buttons({
-      style: {
-          shape: 'pill',
-          color: 'gold',
-          layout: 'vertical',
-          label: 'subscribe'
-      },
-      createSubscription: function(data, actions) {
-        return actions.subscription.create({
-          /* Creates the subscription */
-          plan_id: 'P-4S880592P25868536NBPJ4GY'
-        });
-      },
-      onApprove: function(data, actions) {
-        alert(data.subscriptionID); // You can add optional success message for the subscriber here
-      }
-  }).render('#paypal-button-container-P-4S880592P25868536NBPJ4GY'); // Renders the PayPal button
-</script>
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+          <input type="hidden" name="cmd" value="_xclick">
+          <input type="hidden" name="business" value="njoga96kennedy@gmail.com">
+          <input type="hidden" name="item_name" value="ClearView TV - 1 Month Subscription">
+          <input type="hidden" name="amount" value="8.00">
+          <input type="hidden" name="currency_code" value="USD">
+          <input type="submit" value="Subscribe" class="paypal-button">
+        </form>
       </div>
 
       <!-- 3 Months Plan -->
@@ -81,27 +68,14 @@
           <li>Uptime 99.99%</li>
           <li>Support all devices</li>
         </ul>
-        <div id="paypal-button-container-P-45P58247YC964122GNBPKRPY"></div>
-<script src="https://www.paypal.com/sdk/js?client-id=AW2NTnw4CK3Tux--BKeHBJskrLQesbMVF8qKoOLeL0JEt9N8G_bwrD8ut6hbEkERbh5J0hNVL5vDXPLu&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script>
-<script>
-  paypal.Buttons({
-      style: {
-          shape: 'pill',
-          color: 'gold',
-          layout: 'vertical',
-          label: 'subscribe'
-      },
-      createSubscription: function(data, actions) {
-        return actions.subscription.create({
-          /* Creates the subscription */
-          plan_id: 'P-45P58247YC964122GNBPKRPY'
-        });
-      },
-      onApprove: function(data, actions) {
-        alert(data.subscriptionID); // You can add optional success message for the subscriber here
-      }
-  }).render('#paypal-button-container-P-45P58247YC964122GNBPKRPY'); // Renders the PayPal button
-</script>
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+          <input type="hidden" name="cmd" value="_xclick">
+          <input type="hidden" name="business" value="njoga96kennedy@gmail.com">
+          <input type="hidden" name="item_name" value="ClearView TV - 3 Months Subscription">
+          <input type="hidden" name="amount" value="18.00">
+          <input type="hidden" name="currency_code" value="USD">
+          <input type="submit" value="Subscribe" class="paypal-button">
+        </form>
       </div>
 
       <!-- 6 Months Plan -->
@@ -117,27 +91,14 @@
           <li>Uptime 99.99%</li>
           <li>Support all devices</li>
         </ul>
-        <div id="paypal-button-container-P-1T912423TW187234FNBPKSFY"></div>
-<script src="https://www.paypal.com/sdk/js?client-id=AW2NTnw4CK3Tux--BKeHBJskrLQesbMVF8qKoOLeL0JEt9N8G_bwrD8ut6hbEkERbh5J0hNVL5vDXPLu&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script>
-<script>
-  paypal.Buttons({
-      style: {
-          shape: 'pill',
-          color: 'gold',
-          layout: 'vertical',
-          label: 'subscribe'
-      },
-      createSubscription: function(data, actions) {
-        return actions.subscription.create({
-          /* Creates the subscription */
-          plan_id: 'P-1T912423TW187234FNBPKSFY'
-        });
-      },
-      onApprove: function(data, actions) {
-        alert(data.subscriptionID); // You can add optional success message for the subscriber here
-      }
-  }).render('#paypal-button-container-P-1T912423TW187234FNBPKSFY'); // Renders the PayPal button
-</script>
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+          <input type="hidden" name="cmd" value="_xclick">
+          <input type="hidden" name="business" value="njoga96kennedy@gmail.com">
+          <input type="hidden" name="item_name" value="ClearView TV - 6 Months Subscription">
+          <input type="hidden" name="amount" value="38.00">
+          <input type="hidden" name="currency_code" value="USD">
+          <input type="submit" value="Subscribe" class="paypal-button">
+        </form>
       </div>
 
       <!-- 1 Year Plan -->
@@ -153,27 +114,14 @@
           <li>Uptime 99.99%</li>
           <li>Support all devices</li>
         </ul>
-        <div id="paypal-button-container-P-2FJ013325C6902254NBPKSVY"></div>
-<script src="https://www.paypal.com/sdk/js?client-id=AW2NTnw4CK3Tux--BKeHBJskrLQesbMVF8qKoOLeL0JEt9N8G_bwrD8ut6hbEkERbh5J0hNVL5vDXPLu&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script>
-<script>
-  paypal.Buttons({
-      style: {
-          shape: 'pill',
-          color: 'gold',
-          layout: 'vertical',
-          label: 'subscribe'
-      },
-      createSubscription: function(data, actions) {
-        return actions.subscription.create({
-          /* Creates the subscription */
-          plan_id: 'P-2FJ013325C6902254NBPKSVY'
-        });
-      },
-      onApprove: function(data, actions) {
-        alert(data.subscriptionID); // You can add optional success message for the subscriber here
-      }
-  }).render('#paypal-button-container-P-2FJ013325C6902254NBPKSVY'); // Renders the PayPal button
-</script>
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+          <input type="hidden" name="cmd" value="_xclick">
+          <input type="hidden" name="business" value="njoga96kennedy@gmail.com">
+          <input type="hidden" name="item_name" value="ClearView TV - 1 Year Subscription">
+          <input type="hidden" name="amount" value="56.00">
+          <input type="hidden" name="currency_code" value="USD">
+          <input type="submit" value="Subscribe" class="paypal-button">
+        </form>
       </div>
 
     </div>
@@ -198,8 +146,9 @@
     <p>&copy; 2025 ClearView TV. All rights reserved.</p>
   </footer>
 
-  <a href="https://wa.me/254757780414" class="whatsapp-float" target="_blank">
-    <i>💬</i>
+  <!-- WhatsApp Floating Button with Real Icon -->
+  <a href="https://wa.me/254757780414" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="whatsapp-icon" />
   </a>
 
 </body>
