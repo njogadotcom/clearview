@@ -4,13 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>ClearView TV</title>
-  <meta name="description" content="Watch high-quality IPTV channels anytime, anywhere with ClearView TV. Affordable packages, PayPal & MPesa payments, and easy access." />
-  <meta name="keywords" content="IPTV, ClearView TV, PayPal, MPesa, TV streaming, international channels" />
+  <meta name="description" content="Watch high-quality IPTV channels anytime, anywhere with ClearView TV. Affordable packages, easy access." />
+  <meta name="keywords" content="IPTV, ClearView TV, TV streaming, international channels" />
   <meta property="og:title" content="ClearView TV - IPTV Streaming" />
-  <meta property="og:description" content="Stream high-quality international channels at affordable prices. Pay via PayPal or MPesa." />
+  <meta property="og:description" content="Stream high-quality international channels at affordable prices." />
   <meta property="og:image" content="https://yourdomain.com/logo.png" />
   <meta property="og:url" content="https://yourusername.github.io/ClearViewTV/" />
-  <link rel="stylesheet" href="style.css" />
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -58,23 +57,82 @@
     }
     .product-card {
       background: white;
-      padding: 1rem;
-      border: 1px solid #ccc;
-      width: 250px;
+      padding: 1.5rem;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      width: 280px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      position: relative;
     }
-    .product-card img {
-      width: 100%;
-      height: auto;
-    }
-    footer {
-      background: #000;
+    .product-card.featured::before {
+      content: 'FEATURED';
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: black;
       color: white;
-      text-align: center;
-      padding: 1rem;
-      margin-top: 2rem;
+      padding: 5px 10px;
+      font-size: 0.75rem;
+      transform: rotate(45deg);
+      transform-origin: top right;
     }
-    form {
-      margin-top: 1rem;
+    .product-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 0.2rem;
+    }
+    .product-card p.price {
+      font-size: 2rem;
+      color: #e02828;
+      margin-bottom: 1rem;
+    }
+    .product-card ul {
+      list-style: none;
+      padding: 0;
+      text-align: left;
+      margin-bottom: 1rem;
+    }
+    .product-card ul li::before {
+      content: \"✔ \";
+      color: red;
+      margin-right: 5px;
+    }
+    .product-card ul li {
+      margin-bottom: 0.5rem;
+    }
+    .product-card button {
+      background: #d71920;
+      color: white;
+      padding: 10px;
+      border: none;
+      width: 100%;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    .features-section {
+      padding: 2rem;
+      background: #fff;
+      text-align: center;
+    }
+    .features-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .features-content img {
+      max-width: 90%;
+      border-radius: 10px;
+      margin-bottom: 1.5rem;
+    }
+    .features-content ul {
+      text-align: left;
+      list-style: none;
+      padding: 0;
+      max-width: 600px;
+    }
+    .features-content ul li {
+      font-size: 1.1rem;
+      margin: 0.6rem 0;
     }
     .whatsapp-float {
       position: fixed;
@@ -93,106 +151,124 @@
     .whatsapp-float i {
       margin-top: 16px;
     }
-  </style>
-  <script>
-    function payWithMpesa(packageName, price) {
-      alert('Initiating MPesa payment for ' + packageName + ' at KES ' + price);
+    footer {
+      background: #000;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
     }
-  </script>
+    @media (min-width: 768px) {
+      .features-content {
+        flex-direction: row;
+        justify-content: space-around;
+      }
+      .features-content ul {
+        text-align: left;
+      }
+    }
+  </style>
 </head>
 <body>
+
   <header>
     <h1>ClearView TV</h1>
     <nav>
-      <a href="#products">Products</a>
-      <a href="#contact">Contact</a>
+      <a href=\"#products\">Products</a>
+      <a href=\"#features\">Features</a>
     </nav>
   </header>
 
-  <section id="hero">
+  <section id=\"hero\">
     <h2>ClearView IPTV Streaming</h2>
     <p>Start watching anywhere, anytime. Affordable, high-quality channels from around the world.</p>
-    <a href="#products" class="btn">Shop Now</a>
+    <a href=\"#products\" class=\"btn\">Shop Now</a>
   </section>
 
-  <section id="products">
+  <section id=\"products\">
     <h2>Our Packages</h2>
-    <div class="product-grid">
-      <div class="product-card">
-        <img src="https://via.placeholder.com/250x150?text=1+Month" alt="1 Month Package">
-        <h3>1 Month Package</h3>
-        <p>$8 / KES 1000</p>
-        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-          <input type="hidden" name="cmd" value="_xclick">
-          <input type="hidden" name="business" value="your-paypal@example.com">
-          <input type="hidden" name="item_name" value="1 Month IPTV">
-          <input type="hidden" name="amount" value="8">
-          <input type="hidden" name="currency_code" value="USD">
-          <input type="submit" value="Pay with PayPal">
-        </form>
-        <button onclick="payWithMpesa('1 Month', 1000)">Pay with MPesa</button>
+    <div class=\"product-grid\">
+      <div class=\"product-card featured\">
+        <h3>1 Month</h3>
+        <p class=\"price\">US$8</p>
+        <ul>
+          <li>24h Free Trial</li>
+          <li>Support 7/24H / 365</li>
+          <li>Full HD & 4K Channels</li>
+          <li>9000+ Live Channels</li>
+          <li>Time-Shift & EPG</li>
+          <li>Uptime 99.99%</li>
+          <li>Support all devices</li>
+        </ul>
+        <button>CHOOSE PLAN</button>
       </div>
-      <div class="product-card">
-        <img src="https://via.placeholder.com/250x150?text=3+Months" alt="3 Month Package">
-        <h3>3 Month Package</h3>
-        <p>$18 / KES 2500</p>
-        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-          <input type="hidden" name="cmd" value="_xclick">
-          <input type="hidden" name="business" value="your-paypal@example.com">
-          <input type="hidden" name="item_name" value="3 Month IPTV">
-          <input type="hidden" name="amount" value="18">
-          <input type="hidden" name="currency_code" value="USD">
-          <input type="submit" value="Pay with PayPal">
-        </form>
-        <button onclick="payWithMpesa('3 Month', 2500)">Pay with MPesa</button>
+      <div class=\"product-card\">
+        <h3>3 Months</h3>
+        <p class=\"price\">US$18</p>
+        <ul>
+          <li>24h Free Trial</li>
+          <li>Support 7/24H / 365</li>
+          <li>Full HD & 4K Channels</li>
+          <li>9000+ Live Channels</li>
+          <li>Time-Shift & EPG</li>
+          <li>Uptime 99.99%</li>
+          <li>Support all devices</li>
+        </ul>
+        <button>CHOOSE PLAN</button>
       </div>
-      <div class="product-card">
-        <img src="https://via.placeholder.com/250x150?text=6+Months" alt="6 Month Package">
-        <h3>6 Month Package</h3>
-        <p>$38 / KES 5000</p>
-        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-          <input type="hidden" name="cmd" value="_xclick">
-          <input type="hidden" name="business" value="your-paypal@example.com">
-          <input type="hidden" name="item_name" value="6 Month IPTV">
-          <input type="hidden" name="amount" value="38">
-          <input type="hidden" name="currency_code" value="USD">
-          <input type="submit" value="Pay with PayPal">
-        </form>
-        <button onclick="payWithMpesa('6 Month', 5000)">Pay with MPesa</button>
+      <div class=\"product-card featured\">
+        <h3>6 Months</h3>
+        <p class=\"price\">US$38</p>
+        <ul>
+          <li>24h Free Trial</li>
+          <li>Support 7/24H / 365</li>
+          <li>Full HD & 4K Channels</li>
+          <li>9000+ Live Channels</li>
+          <li>Time-Shift & EPG</li>
+          <li>Uptime 99.99%</li>
+          <li>Support all devices</li>
+        </ul>
+        <button>CHOOSE PLAN</button>
       </div>
-      <div class="product-card">
-        <img src="https://via.placeholder.com/250x150?text=12+Months" alt="12 Month Package">
-        <h3>12 Month Package</h3>
-        <p>$50 / KES 6500</p>
-        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-          <input type="hidden" name="cmd" value="_xclick">
-          <input type="hidden" name="business" value="your-paypal@example.com">
-          <input type="hidden" name="item_name" value="12 Month IPTV">
-          <input type="hidden" name="amount" value="50">
-          <input type="hidden" name="currency_code" value="USD">
-          <input type="submit" value="Pay with PayPal">
-        </form>
-        <button onclick="payWithMpesa('12 Month', 6500)">Pay with MPesa</button>
+      <div class=\"product-card\">
+        <h3>1 Year</h3>
+        <p class=\"price\">US$56</p>
+        <ul>
+          <li>24h Free Trial</li>
+          <li>Support 7/24H / 365</li>
+          <li>Full HD & 4K Channels</li>
+          <li>9000+ Live Channels</li>
+          <li>Time-Shift & EPG</li>
+          <li>Uptime 99.99%</li>
+          <li>Support all devices</li>
+        </ul>
+        <button>CHOOSE PLAN</button>
       </div>
     </div>
   </section>
 
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <p>WhatsApp: +254757780414<br>Email: wooskinner@yahoo.com</p>
-    <form action="https://formspree.io/f/yourFormID" method="POST">
-      <input type="email" name="email" placeholder="Your email" required>
-      <textarea name="message" placeholder="Your message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
+  <section id=\"features\" class=\"features-section\">
+    <h2>Core Features</h2>
+    <div class=\"features-content\">
+      <img src=\"A_flat-style_digital_illustration_showcases_a_tele.png\" alt=\"IPTV Features\" />
+      <ul>
+        <li>📺 Live, Movies, Series</li>
+        <li>🎨 UI & Theme</li>
+        <li>🔍 Program Search</li>
+        <li>⏺️ Recording</li>
+        <li>⏪ Catch Up</li>
+        <li>⭐ Favorite Channels</li>
+      </ul>
+    </div>
   </section>
 
   <footer>
     <p>&copy; 2025 ClearView TV. All rights reserved.</p>
   </footer>
 
-  <a href="https://wa.me/254757780414" class="whatsapp-float" target="_blank">
+  <a href=\"https://wa.me/254757780414\" class=\"whatsapp-float\" target=\"_blank\">
     <i>💬</i>
   </a>
+
 </body>
 </html>
