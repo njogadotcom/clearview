@@ -1,63 +1,102 @@
-body {
-  font-family: Arial, sans-serif;
+/* Base Reset & Defaults */
+* {
+  box-sizing: border-box;
   margin: 0;
-  background: #f9f9f9;
-  color: #333;
+  padding: 0;
 }
 
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header */
 header {
   background: #000;
-  color: white;
-  padding: 1rem;
+  color: #fff;
+  padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
 }
 
-nav a {
-  color: white;
-  margin-left: 1rem;
-  text-decoration: none;
+header h1 {
+  font-size: 1.5rem;
 }
 
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 1rem;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #00aaff;
+}
+
+/* Hero Section */
 #hero {
-  text-align: center;
-  padding: 2rem;
   background: #222;
-  color: white;
+  color: #fff;
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+#hero h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+#hero p {
+  font-size: 1.1rem;
 }
 
 .btn {
   display: inline-block;
-  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  padding: 0.7rem 1.5rem;
   background: #00aaff;
   color: white;
   text-decoration: none;
-  margin-top: 1rem;
   border-radius: 5px;
+  transition: background 0.3s ease;
 }
 
+.btn:hover {
+  background: #0077cc;
+}
+
+/* Product Section */
 #products {
-  padding: 2rem;
+  padding: 2rem 1rem;
   text-align: center;
 }
 
 .product-grid {
   display: flex;
-  justify-content: center;
-  gap: 1rem;
   flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
 }
 
 .product-card {
-  background: white;
-  padding: 1.5rem;
+  background: #fff;
   border: 1px solid #ddd;
   border-radius: 10px;
+  padding: 1.5rem;
   width: 280px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  transition: transform 0.3s;
   position: relative;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
 }
 
 .product-card.featured::before {
@@ -65,23 +104,22 @@ nav a {
   position: absolute;
   top: 0;
   right: 0;
-  background: black;
+  background: crimson;
   color: white;
-  padding: 5px 10px;
   font-size: 0.75rem;
-  transform: rotate(45deg);
-  transform-origin: top right;
+  padding: 5px 10px;
+  border-bottom-left-radius: 10px;
 }
 
 .product-card h3 {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   margin-bottom: 0.2rem;
 }
 
-.product-card p.price {
-  font-size: 2rem;
+.product-card .price {
+  font-size: 1.8rem;
   color: #e02828;
-  margin-bottom: 1rem;
+  margin: 1rem 0;
 }
 
 .product-card ul {
@@ -93,8 +131,8 @@ nav a {
 
 .product-card ul li::before {
   content: "✔ ";
-  color: red;
-  margin-right: 5px;
+  color: green;
+  margin-right: 6px;
 }
 
 .product-card ul li {
@@ -111,12 +149,23 @@ nav a {
   cursor: pointer;
   font-size: 1rem;
   border-radius: 5px;
+  transition: background 0.3s ease;
 }
 
+.product-card button:hover {
+  background: #b41616;
+}
+
+/* Features Section */
 .features-section {
-  padding: 2rem;
   background: #fff;
+  padding: 3rem 1rem;
   text-align: center;
+}
+
+.features-section h2 {
+  margin-bottom: 2rem;
+  font-size: 2rem;
 }
 
 .features-content {
@@ -126,23 +175,33 @@ nav a {
 }
 
 .features-content img {
-  max-width: 90%;
+  max-width: 100%;
   border-radius: 10px;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
 }
 
 .features-content ul {
-  text-align: left;
   list-style: none;
   padding: 0;
   max-width: 600px;
+  text-align: left;
 }
 
 .features-content ul li {
   font-size: 1.1rem;
-  margin: 0.6rem 0;
+  margin-bottom: 0.8rem;
+  position: relative;
+  padding-left: 1.5rem;
 }
 
+.features-content ul li::before {
+  content: '🎬';
+  position: absolute;
+  left: 0;
+}
+
+/* WhatsApp Float */
 .whatsapp-float {
   position: fixed;
   width: 60px;
@@ -151,7 +210,7 @@ nav a {
   right: 40px;
   background-color: #25d366;
   color: white;
-  border-radius: 50px;
+  border-radius: 50%;
   text-align: center;
   font-size: 30px;
   box-shadow: 2px 2px 3px #999;
@@ -162,20 +221,29 @@ nav a {
   margin-top: 16px;
 }
 
+/* Footer */
 footer {
   background: #000;
   color: white;
   text-align: center;
-  padding: 1rem;
-  margin-top: 2rem;
+  padding: 1.5rem;
+  font-size: 0.9rem;
 }
 
+/* Responsive */
 @media (min-width: 768px) {
   .features-content {
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
   }
+
+  .features-content img {
+    max-width: 40%;
+  }
+
   .features-content ul {
-    text-align: left;
+    max-width: 50%;
   }
 }
