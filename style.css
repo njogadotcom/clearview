@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Cairo', sans-serif;
+  background: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background: #111;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+header h1 {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+nav a {
+  color: #fff;
+  margin-left: 1.5rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+nav a:hover {
+  color: #00aaff;
+}
+
+/* Hero */
+#hero {
+  background: linear-gradient(to right, #111, #333);
+  color: #fff;
+  text-align: center;
+  padding: 5rem 2rem;
+}
+#hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+#hero p {
+  font-size: 1.1rem;
+}
+.btn {
+  background: #00aaff;
+  padding: 0.75rem 1.5rem;
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: 600;
+  display: inline-block;
+  margin-top: 1rem;
+  transition: background 0.3s ease;
+}
+.btn:hover {
+  background: #0077b6;
+}
+
+/* Products */
+#products {
+  padding: 4rem 1rem;
+  text-align: center;
+}
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+.product-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 2rem;
+  width: 260px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s;
+}
+.product-card:hover {
+  transform: translateY(-5px);
+}
+.product-card.featured::before {
+  content: 'FEATURED';
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #e02828;
+  color: #fff;
+  padding: .3rem .6rem;
+  border-radius: 0 0 0 12px;
+  font-size: .75rem;
+  font-weight: 700;
+}
+.product-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: .5rem;
+}
+.product-card .price {
+  font-size: 1.8rem;
+  color: #e02828;
+  margin: .75rem 0;
+}
+.product-card ul {
+  list-style: none;
+  text-align: left;
+}
+.product-card ul li {
+  padding-left: 1.2rem;
+  margin-bottom: .5rem;
+  position: relative;
+}
+.product-card ul li::before {
+  content: '\f00c';
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: #e02828;
+  position: absolute;
+  left: 0;
+}
+
+/* Features */
+.features-section {
+  background: #fff;
+  padding: 4rem 1rem;
+  text-align: center;
+}
+.features-section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+.features-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+.features-content img {
+  max-width: 90%;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+.features-content ul {
+  list-style: none;
+  max-width: 500px;
+  text-align: left;
+}
+.features-content ul li {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  padding-left: 1.8rem;
+  position: relative;
+}
+.features-content ul li::before {
+  content: '\f058';
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: #00aaff;
+  position: absolute;
+  left: 0;
+}
+
+/* WhatsApp */
+.whatsapp-float {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  width: 60px;
+  height: 60px;
+  background: #25d366;
+  border-radius: 50%;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+.whatsapp-icon {
+  width: 30px;
+  height: 30px;
+}
+
+/* Footer */
+footer {
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .features-content {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .features-content img,
+  .features-content ul {
+    width: 45%;
+  }
+}
