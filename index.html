@@ -12,6 +12,39 @@
   <meta property="og:url" content="https://kennedynjoga.github.io/clearview/" />
   <link rel="stylesheet" href="style.css">
 </head>
+  <script>
+// Fade-in on scroll
+const faders = document.querySelectorAll('.fade-in');
+const appearOptions = { threshold: 0.1, rootMargin: "0px 0px -50px 0px" };
+const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+    entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('appear');
+        observer.unobserve(entry.target);
+    });
+}, appearOptions);
+faders.forEach(fader => appearOnScroll.observe(fader));
+
+// Dark mode toggle
+const toggleBtn = document.createElement('button');
+toggleBtn.innerText = '🌓 Dark Mode';
+toggleBtn.style.position = 'fixed';
+toggleBtn.style.bottom = '20px';
+toggleBtn.style.left = '20px';
+toggleBtn.style.padding = '10px 15px';
+toggleBtn.style.borderRadius = '8px';
+toggleBtn.style.border = 'none';
+toggleBtn.style.background = '#111';
+toggleBtn.style.color = '#fff';
+toggleBtn.style.cursor = 'pointer';
+toggleBtn.style.zIndex = '200';
+document.body.appendChild(toggleBtn);
+
+toggleBtn.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+});
+</script>
+
 <body>
 
   <header>
