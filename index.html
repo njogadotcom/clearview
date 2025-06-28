@@ -3,102 +3,114 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>ClearView TV - Stream Anywhere</title>
-  <meta name="description" content="Stream high-quality IPTV content anytime, anywhere with ClearView TV.">
+  <title>ClearView TV</title>
+  <meta name="description" content="Modern IPTV streaming platform">
   <link rel="stylesheet" href="style.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
 
-  <header>
-    <div class="container nav-wrapper">
-      <h1>ClearView TV</h1>
-      <nav>
-        <a href="#products">Plans</a>
-        <a href="#features">Features</a>
-      </nav>
-    </div>
-  </header>
-
+  <!-- Hero Section -->
   <section class="hero">
-    <div class="container">
-      <h2>Unlimited Streaming. One Subscription.</h2>
-      <p>Access 9000+ live channels, movies, and series on all devices. Simple. Affordable. Global.</p>
-      <a href="#products" class="btn">Get Started</a>
-    </div>
-  </section>
-
-  <section id="products" class="plans-section">
-    <div class="container">
-      <h2>Subscription Plans</h2>
-      <div class="card-grid">
-
-        <div class="card">
-          <h3>1 Month</h3>
-          <p class="price">$8</p>
-          <ul>
-            <li><i class="fas fa-check-circle"></i> Full HD & 4K</li>
-            <li><i class="fas fa-check-circle"></i> 24/7 Support</li>
-            <li><i class="fas fa-check-circle"></i> 9000+ Channels</li>
-          </ul>
-          <div id="paypal-button-1month"></div>
-        </div>
-
-        <div class="card featured">
-          <h3>3 Months</h3>
-          <p class="price">$18</p>
-          <ul>
-            <li><i class="fas fa-check-circle"></i> Free Trial</li>
-            <li><i class="fas fa-check-circle"></i> Time-Shift & EPG</li>
-            <li><i class="fas fa-check-circle"></i> Multi-Device</li>
-          </ul>
-          <div id="paypal-button-3month"></div>
-        </div>
-
-        <div class="card">
-          <h3>6 Months</h3>
-          <p class="price">$38</p>
-          <ul>
-            <li><i class="fas fa-check-circle"></i> Full HD & 4K</li>
-            <li><i class="fas fa-check-circle"></i> Favorite Channels</li>
-            <li><i class="fas fa-check-circle"></i> 24/7 Support</li>
-          </ul>
-          <div id="paypal-button-6month"></div>
-        </div>
-
-        <div class="card">
-          <h3>1 Year</h3>
-          <p class="price">$56</p>
-          <ul>
-            <li><i class="fas fa-check-circle"></i> EPG Included</li>
-            <li><i class="fas fa-check-circle"></i> Catch Up</li>
-            <li><i class="fas fa-check-circle"></i> Recording Option</li>
-          </ul>
-          <div id="paypal-button-1year"></div>
-        </div>
-
+    <div class="overlay">
+      <div class="container">
+        <h1>Watch Everything. Everywhere.</h1>
+        <p>Join ClearView TV to stream 9000+ channels, movies, and more—anytime, anywhere.</p>
+        <a href="#plans" class="btn">Choose a Plan</a>
       </div>
     </div>
   </section>
 
-  <section id="features" class="features-section">
-    <div class="container features">
-      <img src="illustration.png" alt="IPTV Illustration">
-      <ul>
-        <li><i class="fas fa-tv"></i> Live, Movies, and Series</li>
-        <li><i class="fas fa-mobile-screen-button"></i> Works on all Devices</li>
-        <li><i class="fas fa-record-vinyl"></i> Record & Catch Up</li>
-        <li><i class="fas fa-star"></i> Favorite Channels</li>
-        <li><i class="fas fa-paint-brush"></i> Clean UI & Themes</li>
-      </ul>
+  <!-- Intro Section -->
+  <section class="intro">
+    <div class="container">
+      <h2>Why ClearView TV?</h2>
+      <p>We provide affordable, reliable IPTV subscriptions compatible with all your devices. Experience crystal-clear streams and 24/7 support from our friendly team.</p>
     </div>
   </section>
 
+  <!-- Plans Section -->
+  <section id="plans" class="plans">
+    <div class="container">
+      <h2>Subscription Plans</h2>
+      <div class="grid">
+        <div class="plan">
+          <h3>1 Month</h3>
+          <p class="price">$8</p>
+          <ul>
+            <li><i class="fas fa-check"></i> HD & 4K Channels</li>
+            <li><i class="fas fa-check"></i> 9000+ Live Channels</li>
+            <li><i class="fas fa-check"></i> 24/7 Support</li>
+          </ul>
+          <div id="paypal-button-1month"></div>
+        </div>
+        <div class="plan">
+          <h3>3 Months</h3>
+          <p class="price">$18</p>
+          <ul>
+            <li><i class="fas fa-check"></i> EPG Guide</li>
+            <li><i class="fas fa-check"></i> Free Trial</li>
+            <li><i class="fas fa-check"></i> All Devices</li>
+          </ul>
+          <div id="paypal-button-3month"></div>
+        </div>
+        <div class="plan">
+          <h3>6 Months</h3>
+          <p class="price">$38</p>
+          <ul>
+            <li><i class="fas fa-check"></i> Recording & Catch Up</li>
+            <li><i class="fas fa-check"></i> Favorites List</li>
+            <li><i class="fas fa-check"></i> Premium Channels</li>
+          </ul>
+          <div id="paypal-button-6month"></div>
+        </div>
+        <div class="plan">
+          <h3>1 Year</h3>
+          <p class="price">$56</p>
+          <ul>
+            <li><i class="fas fa-check"></i> Save More</li>
+            <li><i class="fas fa-check"></i> Priority Support</li>
+            <li><i class="fas fa-check"></i> Exclusive Content</li>
+          </ul>
+          <div id="paypal-button-1year"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="features">
+    <div class="container">
+      <h2>Key Features</h2>
+      <div class="features-grid">
+        <div class="feature"><i class="fas fa-tv"></i> 9000+ Live Channels</div>
+        <div class="feature"><i class="fas fa-film"></i> Movies & Series</div>
+        <div class="feature"><i class="fas fa-clock-rotate-left"></i> Catch Up & Recording</div>
+        <div class="feature"><i class="fas fa-mobile-screen"></i> All Devices Supported</div>
+        <div class="feature"><i class="fas fa-palette"></i> Modern UI & Themes</div>
+        <div class="feature"><i class="fas fa-star"></i> Favorite Channels</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="cta">
+    <div class="container">
+      <h2>Ready to Stream?</h2>
+      <p>Start your ClearView TV journey today and enjoy entertainment without limits.</p>
+      <a href="#plans" class="btn">Subscribe Now</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 ClearView TV. Stream smarter.</p>
+    <div class="container">
+      <p>&copy; 2025 ClearView TV. All rights reserved.</p>
+    </div>
   </footer>
 
-  <a href="https://wa.me/254757780414" class="whatsapp-float" target="_blank" title="WhatsApp Us">
+  <!-- WhatsApp Button -->
+  <a href="https://wa.me/254757780414" class="whatsapp-float" target="_blank">
     <i class="fab fa-whatsapp"></i>
   </a>
 
@@ -117,7 +129,7 @@
           purchase_units: [{ amount: { value: plan.amount }, description: plan.desc }]
         }),
         onApprove: (data, actions) => actions.order.capture().then(details => {
-          alert(`Thanks, ${details.payer.name.given_name}! Subscription Confirmed.`);
+          alert(`Thanks, ${details.payer.name.given_name}! Your subscription is active.`);
         })
       }).render(`#paypal-button-${plan.id}`);
     });
