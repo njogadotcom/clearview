@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ClearView TV</title>
+  <meta name="description" content="Watch high-quality IPTV channels anytime, anywhere with ClearView TV." />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>ClearView TV</h1>
+    <nav>
+      <a href="#products">Products</a>
+      <a href="#features">Features</a>
+    </nav>
+  </header>
+
+  <section id="hero">
+    <h2>Stream Live TV, Movies & Series</h2>
+    <p>Watch what you love, anytime, anywhere. High-quality IPTV at unbeatable prices.</p>
+    <a href="#products" class="btn">View Subscription Plans</a>
+  </section>
+
+  <section id="products">
+    <h2>Our Packages</h2>
+    <div class="product-grid">
+      <div class="product-card featured">
+        <h3>1 Month</h3>
+        <p class="price">US$8</p>
+        <ul>
+          <li>24h Free Trial</li>
+          <li>Full HD & 4K Channels</li>
+          <li>9000+ Live Channels</li>
+        </ul>
+        <div id="paypal-button-1month"></div>
+      </div>
+      <div class="product-card">
+        <h3>3 Months</h3>
+        <p class="price">US$18</p>
+        <ul>
+          <li>24h Free Trial</li>
+          <li>Full HD & 4K Channels</li>
+          <li>9000+ Live Channels</li>
+        </ul>
+        <div id="paypal-button-3month"></div>
+      </div>
+      <div class="product-card featured">
+        <h3>6 Months</h3>
+        <p class="price">US$38</p>
+        <ul>
+          <li>24h Free Trial</li>
+          <li>Full HD & 4K Channels</li>
+          <li>9000+ Live Channels</li>
+        </ul>
+        <div id="paypal-button-6month"></div>
+      </div>
+      <div class="product-card">
+        <h3>1 Year</h3>
+        <p class="price">US$56</p>
+        <ul>
+          <li>24h Free Trial</li>
+          <li>Full HD & 4K Channels</li>
+          <li>9000+ Live Channels</li>
+        </ul>
+        <div id="paypal-button-1year"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="features" class="features-section">
+    <h2>Why Choose ClearView</h2>
+    <div class="features-content">
+      <div class="feature-card">
+        <h3>📺 Live Channels</h3>
+        <p>Thousands of HD & 4K live TV channels from around the world.</p>
+      </div>
+      <div class="feature-card">
+        <h3>🎬 Movies & Series</h3>
+        <p>Enjoy the latest blockbusters and binge-worthy shows on demand.</p>
+      </div>
+      <div class="feature-card">
+        <h3>⚡ 99.99% Uptime</h3>
+        <p>Reliable streaming experience with top-notch support.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 ClearView TV. All rights reserved.</p>
+  </footer>
+
+  <a href="https://wa.me/254757780414" class="floating-btn whatsapp" target="_blank" aria-label="Chat on WhatsApp">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+  </a>
+
+  <a href="mailto:njoga96kennedy@gmail.com" class="floating-btn email" aria-label="Email Us">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="#fff" viewBox="0 0 24 24" width="26" height="26">
+      <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 
+      2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 
+      4l-8 5-8-5V6l8 5 8-5v2z"/>
+    </svg>
+  </a>
+
+  <script src="https://www.paypal.com/sdk/js?client-id=YOUR_CLIENT_ID&currency=USD"></script>
+  <script>
+    function renderPayPal(id, amount, desc) {
+      paypal.Buttons({
+        style: { layout: 'vertical', color: 'gold', shape: 'pill', label: 'subscribe' },
+        createOrder: (data, actions) => actions.order.create({
+          purchase_units: [{ amount: { value: amount }, description: desc }]
+        }),
+        onApprove: (data, actions) => actions.order.capture().then(details => {
+          alert(`Thank you, ${details.payer.name.given_name}!`);
+        })
+      }).render(`#paypal-button-${id}`);
+    }
+    renderPayPal('1month', '8.00', '1 Month Subscription');
+    renderPayPal('3month', '18.00', '3 Month Subscription');
+    renderPayPal('6month', '38.00', '6 Month Subscription');
+    renderPayPal('1year', '56.00', '1 Year Subscription');
+  </script>
+
+</body>
+</html>
