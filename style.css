@@ -1,15 +1,71 @@
-/* 1. Accessible Focus Styles */
+/* 1. Sticky Navigation Bar */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: #111; /* Make sure it's visible on scroll */
+}
+
+/* 2. Hover Effect for Product Cards */
+.product-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+}
+
+/* 3. Smooth Scroll for Anchor Links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* 4. Animated Product Card Reveal */
+@keyframes revealCard {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.product-card {
+  animation: revealCard 0.6s ease-out forwards;
+  opacity: 0;
+}
+
+/* 5. Button Hover Effect */
+.btn:hover {
+  background-color: #008ecc;
+  transform: scale(1.1); /* Slight increase in size */
+}
+
+/* 6. Mobile Menu */
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+  }
+  .menu-icon {
+    display: block;
+  }
+
+  .product-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product-card {
+    width: 90%;
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* 7. Accessible Focus Styles */
 a:focus, button:focus, input:focus {
   outline: 3px solid #00aaff; /* Highlight focus state */
 }
 
-/* 2. Accessible Background Colors */
+/* 8. Accessible Background Colors */
 body {
   background-color: #f5f5f5; /* High contrast background */
   color: #333; /* Dark text color */
 }
 
-/* 3. Skip Navigation Link */
+/* 9. Skip Navigation Link */
 .skip-nav {
   position: absolute;
   top: -40px;
@@ -25,7 +81,7 @@ body {
   top: 10px;
 }
 
-/* 4. Label and Input Accessibility */
+/* 10. Label and Input Accessibility */
 label {
   font-weight: bold;
 }
@@ -40,7 +96,7 @@ input:focus, select:focus, textarea:focus {
   outline: 2px solid #00aaff; /* Focused input elements */
 }
 
-/* 5. Header & Nav */
+/* 11. Header & Nav */
 header {
   background: #111;
   color: #fff;
@@ -49,10 +105,12 @@ header {
   align-items: center;
   padding: 1rem 2rem;
 }
+
 header h1 {
   font-weight: 700;
   font-size: 1.5rem;
 }
+
 nav a {
   color: #fff;
   margin-left: 1.5rem;
@@ -60,12 +118,13 @@ nav a {
   font-weight: 600;
   transition: color 0.3s ease, transform 0.3s ease;
 }
+
 nav a:hover {
   color: #00aaff;
   transform: translateX(5px); /* Small horizontal movement on hover */
 }
 
-/* 6. Hero Section */
+/* 12. Hero Section */
 #hero {
   background: #222;
   color: #fff;
@@ -74,14 +133,17 @@ nav a:hover {
   opacity: 0;
   animation: fadeIn 1s forwards; /* Fade in effect */
 }
+
 #hero h2 {
   font-size: 2.2rem;
   margin-bottom: .5rem;
   font-weight: 600;
 }
+
 #hero p {
   font-size: 1.1rem;
 }
+
 .btn {
   display: inline-block;
   padding: .75rem 1.5rem;
@@ -93,9 +155,10 @@ nav a:hover {
   font-weight: 600;
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
+
 .btn:hover {
   background-color: #008ecc;
-  transform: scale(1.05); /* Slightly increase size on hover */
+  transform: scale(1.1); /* Slight increase in size */
 }
 
 @keyframes fadeIn {
@@ -104,22 +167,25 @@ nav a:hover {
   }
 }
 
-/* 7. Products & Pricing Section (Our Packages) */
+/* 13. Products & Pricing Section (Our Packages) */
 #products {
   padding: 3rem 1rem;
   text-align: center;
 }
+
 #products h2 {
   font-size: 2.2rem;
   font-weight: 700;
   margin-bottom: 2rem;
 }
+
 .product-grid {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
   justify-content: center;
 }
+
 .product-card {
   background: #fff;
   border-radius: 12px;
@@ -132,6 +198,7 @@ nav a:hover {
   animation: fadeInUp 0.6s forwards;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 .product-card.featured::before {
   content: 'FEATURED';
   position: absolute;
@@ -144,24 +211,29 @@ nav a:hover {
   font-size: .75rem;
   font-weight: 700;
 }
+
 .product-card h3 {
   font-size: 1.4rem;
   font-weight: 600;
 }
+
 .product-card .price {
   font-size: 1.8rem;
   color: #e02828;
   margin: .75rem 0;
 }
+
 .product-card ul {
   list-style: none;
   margin-bottom: 1.2rem;
 }
+
 .product-card ul li {
   padding-left: 1.2rem;
   margin-bottom: .5rem;
   position: relative;
 }
+
 .product-card ul li::before {
   content: '✔';
   position: absolute;
@@ -175,113 +247,7 @@ nav a:hover {
   box-shadow: 0 8px 24px rgba(0,0,0,0.2); /* Enhance shadow on hover */
 }
 
-/* PayPal Button */
-.paypal-button {
-  background-color: #ffc439;
-  border: none;
-  color: #111;
-  font-weight: bold;
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
-  margin-top: 10px;
-  width: 100%;
-}
-.paypal-button:hover {
-  background-color: #ffb347;
-}
-
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* 8. Features Section */
-.features-section {
-  background: #fff;
-  padding: 3rem 1rem;
-  text-align: center;
-  opacity: 0;
-  transform: translateX(-30px); /* Start with slight horizontal offset */
-  animation: slideIn 0.6s forwards;
-}
-.features-section h2 {
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 1.5rem;
-}
-.features-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2rem;
-}
-.features-content img {
-  max-width: 90%;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-.features-content ul {
-  list-style: none;
-  max-width: 600px;
-  text-align: left;
-}
-.features-content ul li {
-  margin-bottom: .8rem;
-  font-size: 1.1rem;
-  position: relative;
-  padding-left: 1.5rem;
-}
-.features-content ul li::before {
-  content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"><circle cx="8" cy="8" r="8" fill="%23e02828"/><polyline points="4,8 7,11 12,5" fill="none" stroke="%23fff" stroke-width="2"/></svg>');
-  position: absolute;
-  left: 0;
-  top: 0.2rem;
-}
-
-@keyframes slideIn {
-  to {
-    opacity: 1;
-    transform: translateX(0); /* Reset position */
-  }
-}
-
-/* 9. WhatsApp Floating Button */
-.whatsapp-float {
-  position: fixed;
-  bottom: 40px;
-  left: 40px; /* Moved to left side */
-  width: 60px;
-  height: 60px;
-  background: #25d366;
-  border-radius: 50%;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  z-index: 100;
-  transition: transform 0.3s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.whatsapp-float:hover {
-  transform: scale(1.1); /* Slightly scale up on hover */
-}
-
-.whatsapp-icon {
-  width: 35px; /* Adjust the width to ensure it's visible */
-  height: 35px; /* Adjust the height to ensure it's visible */
-  object-fit: cover; /* Ensure the image fits within the container */
-}
-
-/* Add focus styles to improve accessibility */
-.whatsapp-float:focus {
-  outline: 2px solid #00aaff;
-}
-
-/* 10. Footer */
+/* 14. Footer */
 footer {
   background: #111;
   color: #fff;
@@ -290,7 +256,7 @@ footer {
   font-size: .9rem;
 }
 
-/* 11. Page Load Fade-In Animation */
+/* 15. Page Load Fade-In Animation */
 body {
   opacity: 0;
   animation: fadeInBody 1.5s forwards;
@@ -302,7 +268,7 @@ body {
   }
 }
 
-/* 12. Responsive Adjustments */
+/* 16. Responsive Adjustments */
 @media (max-width: 768px) {
   /* Header & Navigation */
   header {
@@ -320,9 +286,11 @@ body {
   #hero {
     padding: 3rem 1.5rem;
   }
+
   #hero h2 {
     font-size: 1.8rem;
   }
+
   #hero p {
     font-size: 1rem;
   }
@@ -350,6 +318,7 @@ body {
   .features-content {
     flex-direction: column;
   }
+
   .features-content img {
     width: 80%;
   }
