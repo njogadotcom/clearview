@@ -1,22 +1,46 @@
-/* 1. Import Cairo font */
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap');
-
-/* 2. Global Styles */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+/* 1. Accessible Focus Styles */
+a:focus, button:focus, input:focus {
+  outline: 3px solid #00aaff; /* Highlight focus state */
 }
+
+/* 2. Accessible Background Colors */
 body {
-  font-family: 'Cairo', sans-serif;
-  background: #f5f5f5;
-  color: #333;
-  line-height: 1.6;
-  margin: 0;
-  padding: 0;
+  background-color: #f5f5f5; /* High contrast background */
+  color: #333; /* Dark text color */
 }
 
-/* 3. Header & Nav */
+/* 3. Skip Navigation Link */
+.skip-nav {
+  position: absolute;
+  top: -40px;
+  left: 10px;
+  background-color: #fff;
+  color: #111;
+  padding: 10px;
+  font-size: 16px;
+  z-index: 1000;
+}
+
+.skip-nav:focus {
+  top: 10px;
+}
+
+/* 4. Label and Input Accessibility */
+label {
+  font-weight: bold;
+}
+
+input, select, textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: 2px solid #00aaff; /* Focused input elements */
+}
+
+/* 5. Header & Nav */
 header {
   background: #111;
   color: #fff;
@@ -41,7 +65,7 @@ nav a:hover {
   transform: translateX(5px); /* Small horizontal movement on hover */
 }
 
-/* 4. Hero Section */
+/* 6. Hero Section */
 #hero {
   background: #222;
   color: #fff;
@@ -80,7 +104,7 @@ nav a:hover {
   }
 }
 
-/* 5. Products & Pricing Section (Our Packages) */
+/* 7. Products & Pricing Section (Our Packages) */
 #products {
   padding: 3rem 1rem;
   text-align: center;
@@ -175,7 +199,7 @@ nav a:hover {
   }
 }
 
-/* 6. Features Section */
+/* 8. Features Section */
 .features-section {
   background: #fff;
   padding: 3rem 1rem;
@@ -225,7 +249,7 @@ nav a:hover {
   }
 }
 
-/* 7. WhatsApp Floating Button */
+/* 9. WhatsApp Floating Button */
 .whatsapp-float {
   position: fixed;
   bottom: 40px;
@@ -251,7 +275,7 @@ nav a:hover {
   height: 30px;
 }
 
-/* 8. Footer */
+/* 10. Footer */
 footer {
   background: #111;
   color: #fff;
@@ -260,7 +284,7 @@ footer {
   font-size: .9rem;
 }
 
-/* 9. Page Load Fade-In Animation */
+/* 11. Page Load Fade-In Animation */
 body {
   opacity: 0;
   animation: fadeInBody 1.5s forwards;
@@ -272,7 +296,7 @@ body {
   }
 }
 
-/* 10. Responsive Adjustments */
+/* 12. Responsive Adjustments */
 @media (max-width: 768px) {
   /* Header & Navigation */
   header {
