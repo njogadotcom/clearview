@@ -249,7 +249,7 @@ nav a:hover {
   }
 }
 
-/* 9. WhatsApp Floating Button */
+/* WhatsApp Floating Button */
 .whatsapp-float {
   position: fixed;
   bottom: 40px;
@@ -270,13 +270,14 @@ nav a:hover {
   transform: scale(1.1); /* Slightly scale up on hover */
 }
 
+/* Set the WhatsApp icon visibility */
 .whatsapp-icon {
   width: 35px; /* Adjust the width to ensure it's visible */
   height: 35px; /* Adjust the height to ensure it's visible */
   object-fit: cover; /* Ensure the image fits within the container */
 }
 
-/* Add focus styles to improve accessibility */
+/* Focus styles to improve accessibility */
 .whatsapp-float:focus {
   outline: 2px solid #00aaff;
 }
