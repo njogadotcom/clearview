@@ -1,7 +1,7 @@
 /* 1. Import Cairo font */
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap');
 
-/* 2. Global */
+/* 2. Global Styles */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -12,6 +12,8 @@ body {
   background: #f5f5f5;
   color: #333;
   line-height: 1.6;
+  margin: 0;
+  padding: 0;
 }
 
 /* 3. Header & Nav */
