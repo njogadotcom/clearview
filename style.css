@@ -80,9 +80,15 @@ nav a:hover {
   }
 }
 
-/* 5. Products & Pricing */
+/* 5. Products & Pricing Section (Our Packages) */
 #products {
   padding: 3rem 1rem;
+  text-align: center;
+}
+#products h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
 }
 .product-grid {
   display: flex;
@@ -160,6 +166,13 @@ nav a:hover {
 }
 .paypal-button:hover {
   background-color: #ffb347;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* 6. Features Section */
