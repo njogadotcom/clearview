@@ -14,26 +14,27 @@
 </head>
 <body>
 
+  <a href="#main-content" class="skip-nav">Skip to main content</a> <!-- Skip navigation link -->
+
   <header>
     <h1>ClearView TV</h1>
-    <nav>
-      <a href="#products">Products</a>
-      <a href="#features">Features</a>
+    <nav role="navigation">
+      <a href="#products" aria-label="View IPTV packages">Products</a>
+      <a href="#features" aria-label="View features of IPTV service">Features</a>
     </nav>
   </header>
 
-  <section id="hero">
-    <h2>ClearView IPTV Streaming</h2>
+  <section id="hero" aria-labelledby="hero-title">
+    <h2 id="hero-title">ClearView IPTV Streaming</h2>
     <p>"Watch what you want, when you want—amazing international content that won’t break the bank."</p>
-    <a href="#products" class="btn">View Subscription Plans</a>
+    <a href="#products" class="btn" aria-label="See subscription plans">View Subscription Plans</a>
   </section>
 
-  <section id="products">
-    <h2>Our Packages</h2>
+  <section id="products" aria-labelledby="products-title">
+    <h2 id="products-title">Our Packages</h2>
     <div class="product-grid">
-
-      <div class="product-card featured">
-        <h3>1 Month</h3>
+      <div class="product-card featured" role="region" aria-labelledby="package-1">
+        <h3 id="package-1">1 Month</h3>
         <p class="price">US$8</p>
         <ul>
           <li>24h Free Trial</li>
@@ -47,8 +48,8 @@
         <div id="paypal-button-1month"></div>
       </div>
 
-      <div class="product-card">
-        <h3>3 Months</h3>
+      <div class="product-card" role="region" aria-labelledby="package-2">
+        <h3 id="package-2">3 Months</h3>
         <p class="price">US$18</p>
         <ul>
           <li>24h Free Trial</li>
@@ -62,8 +63,8 @@
         <div id="paypal-button-3month"></div>
       </div>
 
-      <div class="product-card featured">
-        <h3>6 Months</h3>
+      <div class="product-card featured" role="region" aria-labelledby="package-3">
+        <h3 id="package-3">6 Months</h3>
         <p class="price">US$38</p>
         <ul>
           <li>24h Free Trial</li>
@@ -77,8 +78,8 @@
         <div id="paypal-button-6month"></div>
       </div>
 
-      <div class="product-card">
-        <h3>1 Year</h3>
+      <div class="product-card" role="region" aria-labelledby="package-4">
+        <h3 id="package-4">1 Year</h3>
         <p class="price">US$56</p>
         <ul>
           <li>24h Free Trial</li>
@@ -91,14 +92,13 @@
         </ul>
         <div id="paypal-button-1year"></div>
       </div>
-
     </div>
   </section>
 
-  <section id="features" class="features-section">
-    <h2>Core Features</h2>
+  <section id="features" class="features-section" aria-labelledby="features-title">
+    <h2 id="features-title">Core Features</h2>
     <div class="features-content">
-      <img src="illustration.png" alt="IPTV Features" />
+      <img src="illustration.png" alt="IPTV features showing live channels and recording" />
       <ul>
         <li>📺 Live, Movies, Series</li>
         <li>🎨 UI & Theme</li>
@@ -111,11 +111,11 @@
   </section>
 
   <footer>
-    <p>&copy; ClearView TV 2020 - 2025. All rights reserved.</p>
+    <p>&copy; 2025 ClearView TV. All rights reserved.</p>
   </footer>
 
-  <a href="https://wa.me/254757780414" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="whatsapp-icon" />
+  <a href="https://wa.me/254757780414" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp" tabindex="0">
+    <img src="whatsapp-icon.svg" alt="WhatsApp" class="whatsapp-icon" />
   </a>
 
   <script src="https://www.paypal.com/sdk/js?client-id=AfXzRNh4iSAkDcLgavdYpb-Hla4Bc2czzDYYTmo256zWeGUja7yUjuIJ79X6E8LgYWAuJPvjsf9FJGzj&currency=USD"></script>
