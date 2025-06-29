@@ -1,0 +1,278 @@
+
+/* 1. Import Cairo font */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap');
+
+/* 2. Global */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Cairo', sans-serif;
+  background: #f5f5f5;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* 3. Header & Nav */
+header {
+  background: #111;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+header h1 {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+nav a {
+  color: #fff;
+  margin-left: 1.5rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color .3s;
+}
+nav a:hover {
+  color: #00aaff;
+}
+
+/* 4. Hero Section */
+#hero {
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 4rem 2rem;
+}
+#hero h2 {
+  font-size: 2.2rem;
+  margin-bottom: .5rem;
+  font-weight: 600;
+}
+#hero p {
+  font-size: 1.1rem;
+}
+.btn {
+  display: inline-block;
+  padding: .75rem 1.5rem;
+  background: #00aaff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 30px;
+  margin-top: 1rem;
+  font-weight: 600;
+  transition: background .3s;
+}
+.btn:hover {
+  background: #008ecc;
+}
+
+/* 5. Products & Pricing */
+#products {
+  padding: 3rem 1rem;
+}
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+.product-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 2rem 1.5rem;
+  width: 260px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  position: relative;
+  transition: all 0.3s ease;
+}
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+.product-card.featured::before {
+  content: 'FEATURED';
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #e02828;
+  color: #fff;
+  padding: .3rem .6rem;
+  border-radius: 0 0 0 12px;
+  font-size: .75rem;
+  font-weight: 700;
+  transition: transform 0.3s;
+}
+.product-card:hover .product-card.featured::before {
+  transform: scale(1.1);
+}
+.product-card h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+.product-card .price {
+  font-size: 1.8rem;
+  color: #e02828;
+  margin: .75rem 0;
+}
+.product-card ul {
+  list-style: none;
+  margin-bottom: 1.2rem;
+}
+.product-card ul li {
+  padding-left: 1.2rem;
+  margin-bottom: .5rem;
+  position: relative;
+}
+.product-card ul li::before {
+  content: '✔';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #e02828;
+}
+
+/* PayPal Button */
+.paypal-button {
+  background-color: #ffc439;
+  border: none;
+  color: #111;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 100%;
+}
+.paypal-button:hover {
+  background-color: #ffb347;
+}
+
+/* 6. Features Section */
+.features-section {
+  background: #fff;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+.features-section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+.features-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+.features-content img {
+  max-width: 90%;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.features-content ul {
+  list-style: none;
+  max-width: 600px;
+  text-align: left;
+}
+.features-content ul li {
+  margin-bottom: .8rem;
+  font-size: 1.1rem;
+  position: relative;
+  padding-left: 1.5rem;
+}
+.features-content ul li::before {
+  content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"><circle cx="8" cy="8" r="8" fill="%23e02828"/><polyline points="4,8 7,11 12,5" fill="none" stroke="%23fff" stroke-width="2"/></svg>');
+  position: absolute;
+  left: 0;
+  top: 0.2rem;
+}
+
+/* 7. FAQ Section */
+.faq-section {
+  background: #fff;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+.faq-section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+.faq-item {
+  margin-bottom: 1rem;
+}
+.faq-btn {
+  background: #00aaff;
+  color: #fff;
+  border: none;
+  padding: 1rem;
+  font-size: 1.1rem;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  border-radius: 8px;
+}
+.faq-btn:hover {
+  background: #008ecc;
+}
+.faq-content {
+  display: none;
+  padding: 1rem;
+  background: #f5f5f5;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+.faq-btn.active + .faq-content {
+  display: block;
+}
+
+/* 8. WhatsApp Floating Button */
+.whatsapp-float {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  width: 60px;
+  height: 60px;
+  background: #25d366;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+  transition: transform 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+.whatsapp-icon {
+  width: 30px;
+  height: 30px;
+}
+
+/* 9. Footer */
+footer {
+  background: #111;
+  color: #fff;
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: .9rem;
+}
+
+/* 10. Responsive */
+@media (min-width: 768px) {
+  .features-content {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .features-content img {
+    width: 45%;
+  }
+  .features-content ul {
+    width: 45%;
+  }
+}
