@@ -215,29 +215,28 @@ nav a:hover {
 }
 .features-content {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2rem;
+  align-items: center; /* Align items vertically in the center */
+  justify-content: space-between; /* Space out image and list */
+  gap: 2rem; /* Add space between the image and the list */
+  flex-wrap: wrap; /* Allow wrapping on small screens */
 }
 .features-content img {
-  max-width: 90%;
+  max-width: 40%; /* Adjust image size */
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 .features-content ul {
   list-style: none;
-  max-width: 600px;
-  text-align: center;
-  display: flex;
-  justify-content: space-around; /* Distributes items evenly */
+  display: flex; /* Align items horizontally */
+  justify-content: space-around; /* Space out items evenly */
   padding: 0;
+  gap: 20px; /* Space between each feature */
 }
 .features-content ul li {
   font-size: 1.1rem;
-  margin-bottom: 0; /* Remove margin-bottom to keep them in line */
-  display: inline-flex; /* Align items horizontally */
-  align-items: center; /* Vertically center the icons and text */
-  gap: 8px; /* Add some space between the icon and text */
+  display: inline-flex; /* Align text and icons horizontally */
+  align-items: center;
+  gap: 8px; /* Space between icon and text */
 }
 
 @keyframes slideIn {
