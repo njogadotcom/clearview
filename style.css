@@ -227,19 +227,17 @@ nav a:hover {
 .features-content ul {
   list-style: none;
   max-width: 600px;
-  text-align: left;
+  text-align: center;
+  display: flex;
+  justify-content: space-around; /* Distributes items evenly */
+  padding: 0;
 }
 .features-content ul li {
-  margin-bottom: .8rem;
   font-size: 1.1rem;
-  position: relative;
-  padding-left: 1.5rem;
-}
-.features-content ul li::before {
-  content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"><circle cx="8" cy="8" r="8" fill="%23e02828"/><polyline points="4,8 7,11 12,5" fill="none" stroke="%23fff" stroke-width="2"/></svg>');
-  position: absolute;
-  left: 0;
-  top: 0.2rem;
+  margin-bottom: 0; /* Remove margin-bottom to keep them in line */
+  display: inline-flex; /* Align items horizontally */
+  align-items: center; /* Vertically center the icons and text */
+  gap: 8px; /* Add some space between the icon and text */
 }
 
 @keyframes slideIn {
@@ -249,7 +247,7 @@ nav a:hover {
   }
 }
 
-/* WhatsApp Floating Button */
+/* 9. WhatsApp Floating Button */
 .whatsapp-float {
   position: fixed;
   bottom: 40px;
@@ -270,14 +268,13 @@ nav a:hover {
   transform: scale(1.1); /* Slightly scale up on hover */
 }
 
-/* Set the WhatsApp icon visibility */
 .whatsapp-icon {
   width: 35px; /* Adjust the width to ensure it's visible */
   height: 35px; /* Adjust the height to ensure it's visible */
   object-fit: cover; /* Ensure the image fits within the container */
 }
 
-/* Focus styles to improve accessibility */
+/* Add focus styles to improve accessibility */
 .whatsapp-float:focus {
   outline: 2px solid #00aaff;
 }
