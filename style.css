@@ -233,11 +233,15 @@ nav a:hover {
   padding: 0;
 }
 .features-content ul li {
-  font-size: 1.1rem;
-  margin-bottom: 0; /* Remove margin-bottom to keep them in line */
+  font-size: 1.5rem;  /* Increased font size for text */
+  margin-bottom: 0;   /* Remove margin-bottom to keep them in line */
   display: inline-flex; /* Align items horizontally */
   align-items: center; /* Vertically center the icons and text */
-  gap: 8px; /* Add some space between the icon and text */
+  gap: 12px; /* Increase space between the icon and text */
+}
+
+.features-content ul li svg {
+  font-size: 3rem; /* Increased size for icons */
 }
 
 @keyframes slideIn {
