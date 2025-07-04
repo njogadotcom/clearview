@@ -1,3 +1,4 @@
+/* General Body and Global Styles */
 body {
   background-color: #0a0f2c;
   color: #ffffff;
@@ -40,6 +41,15 @@ nav a {
   padding: 4rem 2rem;
 }
 
+#hero h2 {
+  font-size: 2rem;
+}
+
+#hero p {
+  font-size: 1rem;
+  margin: 1rem 0;
+}
+
 .btn {
   display: inline-block;
   padding: 0.75rem 1.5rem;
@@ -53,15 +63,20 @@ nav a {
   background: #00aabb;
 }
 
+/* Products Section */
 #products {
   padding: 3rem 1rem;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center align the content */
 }
 
 .product-grid {
   display: flex;
   gap: 1rem;
-  overflow-x: auto;
+  justify-content: center; /* Horizontally center the cards */
+  flex-wrap: wrap; /* Ensure wrapping on smaller screens */
   padding: 1rem;
 }
 
@@ -71,6 +86,8 @@ nav a {
   border-radius: 12px;
   min-width: 250px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  margin: 1rem;
+  text-align: left;
 }
 
 .product-card.featured::before {
@@ -79,7 +96,9 @@ nav a {
   top: 0;
   right: 0;
   background: #00cfff;
+  color: #0a0f2c;
   padding: 0.3rem 0.6rem;
+  border-radius: 0 0 0 8px;
   font-size: 0.7rem;
 }
 
@@ -102,14 +121,10 @@ nav a {
   color: #00cfff;
 }
 
-#features, #testimonials, #faq, #thank-you {
+/* Testimonials Section */
+#testimonials {
   padding: 3rem 1rem;
   text-align: center;
-}
-
-.features-content img {
-  max-width: 90%;
-  border-radius: 12px;
 }
 
 .testimonials-grid {
@@ -126,6 +141,24 @@ nav a {
   width: 250px;
 }
 
+.testimonial-card h4 {
+  margin-top: 1rem;
+  font-weight: 600;
+  color: #00cfff;
+}
+
+/* FAQ Section */
+#faq {
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.faq-container {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+
 .faq-container details {
   background: #10194d;
   padding: 1rem;
@@ -133,6 +166,17 @@ nav a {
   border-radius: 8px;
 }
 
+.faq-container summary {
+  font-weight: 600;
+  color: #00cfff;
+  outline: none;
+}
+
+.faq-container p {
+  margin-top: 0.5rem;
+}
+
+/* Footer Styles */
 footer {
   background: #0a0f2c;
   padding: 1rem;
@@ -155,4 +199,23 @@ footer {
 .whatsapp-icon {
   width: 35px;
   height: 35px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .product-grid {
+    flex-direction: column;
+  }
+
+  .product-card {
+    width: 90%;
+  }
+
+  .testimonials-grid {
+    flex-direction: column;
+  }
+
+  .testimonial-card {
+    width: 80%;
+  }
 }
