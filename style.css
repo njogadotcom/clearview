@@ -1,5 +1,4 @@
-/* Modern IPTV Color Theme Refresh */
-
+/* Modern IPTV Theme */
 body {
   background-color: #0a0f2c;
   color: #ffffff;
@@ -33,17 +32,22 @@ header h1 {
   font-weight: 700;
 }
 nav a {
-  margin-left: 1.5rem;
+  margin-left: 1rem;
   font-weight: 600;
 }
 
 #hero {
   background: linear-gradient(135deg, #0a0f2c, #10194d);
-  color: #ffffff;
   text-align: center;
   padding: 4rem 2rem;
 }
-
+#hero h2 {
+  font-size: 2rem;
+}
+#hero p {
+  font-size: 1rem;
+  margin: 1rem 0;
+}
 .btn {
   display: inline-block;
   padding: 0.75rem 1.5rem;
@@ -58,22 +62,38 @@ nav a {
   transform: scale(1.05);
 }
 
-#products, #features, #contact, #about {
+#products {
   padding: 3rem 1rem;
   text-align: center;
 }
-
+.product-grid {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 1rem;
+}
 .product-card {
+  flex: 0 0 280px;
   background: #10194d;
   color: #ffffff;
   border-radius: 12px;
-  padding: 2rem 1.5rem;
-  width: 260px;
+  padding: 1.5rem 1rem;
   box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-  margin: 1rem;
+  scroll-snap-align: start;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .product-card.featured::before {
+  content: 'FEATURED';
+  position: absolute;
+  top: 0;
+  right: 0;
   background: #00cfff;
+  color: #0a0f2c;
+  padding: 0.3rem 0.6rem;
+  border-radius: 0 0 0 8px;
+  font-size: 0.7rem;
+  font-weight: 700;
 }
 .product-card h3 {
   font-size: 1.4rem;
@@ -81,6 +101,55 @@ nav a {
 .product-card .price {
   font-size: 1.8rem;
   color: #00cfff;
+  margin: 0.5rem 0;
+}
+.product-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem 0;
+  text-align: left;
+}
+.product-card ul li {
+  padding-left: 1.2rem;
+  position: relative;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+.product-card ul li::before {
+  content: '✔';
+  position: absolute;
+  left: 0;
+  color: #00cfff;
+}
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+}
+
+#features {
+  padding: 3rem 1rem;
+  text-align: center;
+}
+.features-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.features-content img {
+  max-width: 90%;
+  border-radius: 12px;
+}
+.features-content ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  justify-content: center;
+  padding: 0;
+  list-style: none;
+}
+.features-content ul li {
+  font-size: 1rem;
 }
 
 footer {
@@ -91,37 +160,27 @@ footer {
   font-size: 0.9rem;
 }
 
-.features-content img {
-  border-radius: 12px;
-  max-width: 90%;
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  width: 60px;
+  height: 60px;
+  background: #25d366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
 }
-
-form {
-  max-width: 500px;
-  margin: 0 auto;
-  background: #10194d;
-  padding: 2rem;
-  border-radius: 12px;
+.whatsapp-float:hover {
+  transform: scale(1.1);
 }
-form input, form textarea {
-  width: 100%;
-  padding: 0.75rem;
-  margin: 0.5rem 0;
-  border: none;
-  border-radius: 6px;
-}
-form button {
-  background: #00cfff;
-  color: #0a0f2c;
-  padding: 0.75rem;
-  border: none;
-  border-radius: 6px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-form button:hover {
-  background: #00aabb;
+.whatsapp-icon {
+  width: 35px;
+  height: 35px;
 }
 
 @keyframes fadeInBody {
