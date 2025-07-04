@@ -1,0 +1,158 @@
+body {
+  background-color: #0a0f2c;
+  color: #ffffff;
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #00cfff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #00aabb;
+}
+
+header {
+  background: #0a0f2c;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+header h1 {
+  font-size: 1.8rem;
+}
+
+nav a {
+  margin-left: 1rem;
+  font-weight: 600;
+}
+
+#hero {
+  background: linear-gradient(135deg, #0a0f2c, #10194d);
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: #00cfff;
+  color: #0a0f2c;
+  border-radius: 30px;
+  font-weight: 600;
+}
+
+.btn:hover {
+  background: #00aabb;
+}
+
+#products {
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.product-grid {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding: 1rem;
+}
+
+.product-card {
+  background: #10194d;
+  padding: 1rem;
+  border-radius: 12px;
+  min-width: 250px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+.product-card.featured::before {
+  content: 'FEATURED';
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #00cfff;
+  padding: 0.3rem 0.6rem;
+  font-size: 0.7rem;
+}
+
+.product-card h3 {
+  font-size: 1.4rem;
+}
+
+.product-card .price {
+  font-size: 1.8rem;
+  color: #00cfff;
+}
+
+.product-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.product-card ul li::before {
+  content: '✔ ';
+  color: #00cfff;
+}
+
+#features, #testimonials, #faq, #thank-you {
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.features-content img {
+  max-width: 90%;
+  border-radius: 12px;
+}
+
+.testimonials-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.testimonial-card {
+  background: #10194d;
+  padding: 1rem;
+  border-radius: 12px;
+  width: 250px;
+}
+
+.faq-container details {
+  background: #10194d;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 8px;
+}
+
+footer {
+  background: #0a0f2c;
+  padding: 1rem;
+  text-align: center;
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  width: 60px;
+  height: 60px;
+  background: #25d366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.whatsapp-icon {
+  width: 35px;
+  height: 35px;
+}
