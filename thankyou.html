@@ -1,28 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Thank You - ClearView TV</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Thank You - ClearView TV</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Extra styles for enhanced contact button if not already in style.css */
+    .contact-btn {
+      background: linear-gradient(90deg, #25d366 70%, #15e0ff 100%);
+      color: #121a36;
+      font-weight: 800;
+      font-size: 1.15rem;
+      border: none;
+      border-radius: 40px;
+      padding: 1rem 2.2rem;
+      display: inline-flex;
+      align-items: center;
+      box-shadow: 0 2px 12px rgba(37,211,102,0.20);
+      transition: background 0.2s, box-shadow 0.2s, color 0.2s;
+      margin-top: 1.5rem;
+      margin-bottom: 1.5rem;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .contact-btn img {
+      width: 1.4em;
+      height: 1.4em;
+      vertical-align: middle;
+      margin-right: 0.5em;
+    }
+    .contact-btn:hover,
+    .contact-btn:focus {
+      background: linear-gradient(90deg, #128c7e 70%, #0fb1c6 100%);
+      color: #fff;
+      box-shadow: 0 4px 18px rgba(21, 224, 255, 0.28);
+      outline: 2px solid #fff;
+      text-decoration: none;
+    }
+    @media (max-width: 600px) {
+      .contact-btn {
+        width: 100%;
+        justify-content: center;
+        font-size: 1.05rem;
+        padding: 1rem 0;
+      }
+    }
+  </style>
 </head>
 <body>
-<header>
-<h1>ClearView TV</h1>
-<nav>
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="contact.html">Contact</a>
-</nav>
-</header>
-<section id="thank-you">
-<h2>Thank You for Your Purchase!</h2>
-<p>Your payment was successful. We will contact you via WhatsApp or email shortly with your IPTV setup instructions.</p>
-<p>If you have any urgent questions, you can contact us on WhatsApp below:</p>
-<a href="https://wa.me/254757780414" class="btn">Chat on WhatsApp</a>
-</section>
-<footer>
-<p>&copy; 2025 ClearView TV. All rights reserved.</p>
-</footer>
+  <header>
+    <h1>ClearView TV</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+  <section id="thank-you">
+    <h2>Thank You for Your Purchase!</h2>
+    <p>Your payment was successful. We will contact you via WhatsApp or email shortly with your IPTV setup instructions.</p>
+    <p>If you have any urgent questions, you can contact us on WhatsApp below:</p>
+    <a href="https://wa.me/254757780414" class="btn contact-btn" aria-label="Chat with us on WhatsApp">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="" aria-hidden="true">
+      Chat on WhatsApp
+    </a>
+  </section>
+  <footer>
+    <p>&copy; 2025 ClearView TV. All rights reserved.</p>
+  </footer>
 </body>
 </html>
